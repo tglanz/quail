@@ -1,0 +1,23 @@
+refresh_rate: 30 seconds
+appenders:
+  stdout:
+    kind: console
+  general:
+    kind: file
+    append: false
+    path: "log/general.log"
+  quail:
+    kind: file
+    append: false
+    path: "log/quail.log"
+root:
+  level: debug
+  appenders:
+    - stdout
+    - general
+loggers:
+  quail_game:
+    level: debug
+    appenders:
+      - quail
+      
