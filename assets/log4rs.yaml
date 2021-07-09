@@ -2,11 +2,11 @@ refresh_rate: 30 seconds
 appenders:
   stdout:
     kind: console
-  general:
+  root_file:
     kind: file
     append: false
-    path: "log/general.log"
-  quail:
+    path: "log/root.log"
+  quail_file:
     kind: file
     append: false
     path: "log/quail.log"
@@ -14,10 +14,10 @@ root:
   level: debug
   appenders:
     - stdout
-    - general
+    - root_file
 loggers:
   quail_game:
     level: debug
     appenders:
-      - quail
+      - quail_file
       
