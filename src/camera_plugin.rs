@@ -1,16 +1,12 @@
 use bevy::{
     prelude::*,
     render::camera::Camera,
-    render::texture::FilterMode
 };
-
-use bevy_ecs_tilemap::prelude::*;
 
 pub struct CameraPlugin;
 
 fn startup(
     mut commands: Commands,
-    asset_server: Res<AssetServer>,
 ) {
     commands.spawn_bundle(OrthographicCameraBundle::new_2d());
 }

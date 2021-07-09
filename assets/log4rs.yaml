@@ -11,7 +11,7 @@ appenders:
     append: false
     path: "log/quail.log"
 root:
-  level: debug
+  level: info
   appenders:
     - stdout
     - root_file
